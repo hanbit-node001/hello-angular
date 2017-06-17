@@ -7,8 +7,11 @@ import {Product} from "./service/product";
     selector: 'detail',
     template: `<h1>Detail Component</h1>
                Detail ID: {{detailId}}
-               <div *ngFor="let product of products">
-                   {{product.id}}. {{product.name}} ({{product.price}}원)
+               <button (click)="showProducts = !showProducts">Toggle Products</button>
+               <div *ngIf="showProducts">
+                   <div *ngFor="let product of products">
+                       {{product.id}}. {{product.name}} ({{product.price}}원)
+                   </div>
                </div>
                <router-outlet></router-outlet>
                <a [routerLink]="['./']">Desc</a>
@@ -17,6 +20,7 @@ import {Product} from "./service/product";
 })
 export class DetailComponent {
     detailId: string;
+    showProducts: boolean = true;
     products: Array<Product>;
 
     constructor(route: ActivatedRoute,
