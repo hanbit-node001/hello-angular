@@ -1,0 +1,8 @@
+<h1>Hello {{name}}!</h1>
+<button (click)="changeName()">Change</button>
+<br>
+<a [routerLink]="['/']">Home</a>
+<a [routerLink]="['/sub']">Sub</a>
+<a [routerLink]="['/detail', 123]">Detail</a>
+<button (click)="gotoSub()">Go to Sub</button>
+<router-outlet></router-outlet>

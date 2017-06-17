@@ -1,0 +1,28 @@
+{
+  "name": "hello-angular",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server --port=8088",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/common": "4.1.0",
+    "@angular/compiler": "4.1.0",
+    "@angular/core": "4.1.0",
+    "@angular/forms": "4.1.0",
+    "@angular/http": "4.1.0",
+    "@angular/platform-browser": "4.1.0",
+    "@angular/platform-browser-dynamic": "4.1.0",
+    "@angular/router": "4.1.0",
+    "core-js": "2.4.1",
+    "rxjs": "5.4.1",
+    "systemjs": "0.19.47",
+    "zone.js": "0.8.12"
+  },
+  "devDependencies": {
+    "typescript": "2.3.4"
+  }
+}
