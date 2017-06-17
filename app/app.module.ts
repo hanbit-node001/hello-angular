@@ -15,7 +15,7 @@ import { ReviewComponent } from './review.component';
 import { WrongComponent } from './wrong.component';
 import { LoginGuard } from "./login.guard";
 import { LeaveBlocker } from "./leave.blocker";
-import {ProductService} from "./service/product.service";
+import { ProductComponent } from "./product.component";
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -43,6 +43,7 @@ const routes: Routes = [
         HomeComponent,
         SubComponent,
         DetailComponent,
+        ProductComponent,
         DescComponent,
         ReviewComponent,
         MyPageComponent,

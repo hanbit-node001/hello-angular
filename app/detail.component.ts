@@ -10,7 +10,7 @@ import {Product} from "./service/product";
                <button (click)="showProducts = !showProducts">Toggle Products</button>
                <div *ngIf="showProducts">
                    <div *ngFor="let product of products">
-                       {{product.id}}. {{product.name}} ({{product.price}}원)
+                       <product (price)="priceHandler($event)" [product]="product"></product>
                    </div>
                </div>
                <router-outlet></router-outlet>
@@ -28,5 +28,9 @@ export class DetailComponent {
         this.detailId = route.snapshot.params['id'];
 
         this.products = productService.getProducts();
+    }
+
+    priceHandler(event: Event) {
+        console.log(event);
     }
 }
